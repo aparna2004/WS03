@@ -2,7 +2,6 @@ from django.shortcuts import render, get_object_or_404
 from .models import Booking
 from .serializers import BookingDetailSerializer
 
-
 def booking_detail_view(request, id):
     booking = get_object_or_404(Booking, id=id)
     serializer = BookingDetailSerializer(booking)
